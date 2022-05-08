@@ -17,8 +17,8 @@
   smudge = git-media-smudge %f
 
 [user]
-	name = Mike Hartington
-	email = mikehartington@gmail.com
+	name = Abel Huanca
+	email = abel.huanca@upeu.edu.pe
   signingkey = 6782DBB958F09B85
 
 [credential]
@@ -36,7 +36,7 @@
 	required = true
 
 [github]
-  user = mhartington
+  user = abelthf
 
 [color "diff-highlight"]
   oldNormal = "red bold"
@@ -48,7 +48,7 @@
   token = !security find-internet-password -a mhartington -s github.com -l 'ghi token' -w
 
 [commit]
-  gpgsign = true
+  gpgsign = false
 
 [gpg]
 	program = gpg

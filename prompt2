@@ -323,6 +323,10 @@ prompt_reset_prompt() {
   zle && zle .reset-prompt
 }
 
+function virtualenv_info {
+    [ $VIRTUAL_ENV ] && echo '('`basename $VIRTUAL_ENV`') '
+}
+
 prompt_setup() {
   # Prevent percentage showing up if output doesn't end with a newline.
   export PROMPT_EOL_MARK=''
@@ -348,7 +352,8 @@ prompt_setup() {
   autoload -Uz async && async
 
   add-zsh-hook precmd prompt_precmd
-  PROMPT='$ '
+  #PROMPT='$ '
+  PROMPT='$(virtualenv_info)$ '
 }
 
 prompt_setup "$@"

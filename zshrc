@@ -6,6 +6,8 @@
 #### END FIG ENV VARIABLES ####
 # Source any other dot files
 # Just .aliases right now git-completion.bash
+export PATH="/opt/homebrew/bin:$PATH"
+
 autoload -U promptinit; promptinit
 bindkey -v
 # Disable zsh autocorrect
@@ -36,7 +38,8 @@ fi
 ###-end-ionic-completion-###
 . <(npm completion)
 
-source /usr/local/share/antigen/antigen.zsh
+#source /usr/local/share/antigen/antigen.zsh
+source /opt/homebrew/share/antigen/antigen.zsh
 
 # antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions

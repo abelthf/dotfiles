@@ -17,7 +17,9 @@ export DISABLE_AUTO_TITLE="true"
 
 export PATH=/usr/local/bin:$PATH
 export PATH=${PATH}:~/bin
-export BREW_PATH=$(brew --prefix)
+export BREW_PATH=/opt/homebrew
+#export BREW_PATH=$(brew --prefix)
+#export BREW_PATH=$(/opt/hombrew/bin/brew --prefix)
 export PATH=${PATH}:~/bin/nvim/bin
 
 
@@ -391,3 +393,4 @@ function cleanModules() {
     rm -r $i
   done
 }
+. "$HOME/.cargo/env"
